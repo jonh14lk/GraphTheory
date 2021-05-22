@@ -16,15 +16,15 @@ void get_current_flow(int &current_flow, vector<vector<ford_edge>> &adj, vector<
     current_flow = min_capacity;
     return;
   }
-  else if (parent[v] != -1)
+  if (parent[v] != -1)
   {
     int index = parent[v];
     int u = adj[v][index].u;
-    int capacity = adj[v][index].capacity;
     int back_edge = adj[v][index].back_edge;
+    int capacity = adj[u][back_edge].capacity;
     get_current_flow(current_flow, adj, parent, source, u, min(min_capacity, capacity));
-    adj[v][index].capacity -= current_flow;
-    adj[u][back_edge].capacity += current_flow;
+    adj[u][back_edge].capacity -= current_flow;
+    adj[v][index].capacity += current_flow;
   }
 }
 void bfs(int n, int source, int sink, vector<vector<ford_edge>> &adj,
@@ -46,17 +46,17 @@ void bfs(int n, int source, int sink, vector<vector<ford_edge>> &adj,
       break;
     for (int i = 0; i < adj[v].size(); i++)
     {
-      int u = adj[v][i].u, capacity = adj[v][i].capacity;
+      int u = adj[v][i].u, capacity = adj[v][i].capacity, back_edge = adj[v][i].back_edge;
       if (capacity > 0 && !visited[u])
       {
         visited[u] = true;
         q.push(u);
-        parent[u] = i;
+        parent[u] = back_edge;
       }
     }
   }
 }
-int ford_fulkerson_max_flow(int &n, int &source, int &sink, vector<vector<ford_edge>> &adj,
+int ford_fulkerson_max_flow(int n, int source, int sink, vector<vector<ford_edge>> &adj,
                             vector<bool> &visited, vector<int> &parent)
 {
   int max_flow = 0;
@@ -74,7 +74,7 @@ int ford_fulkerson_max_flow(int &n, int &source, int &sink, vector<vector<ford_e
 void add_edge_ford(vector<vector<ford_edge>> &adj, int u, int v, int capacity)
 {
   adj[u].push_back({v, capacity, (int)adj[v].size()});
-  adj[v].push_back({u, capacity, (int)adj[u].size() - 1});
+  adj[v].push_back({u, 0, (int)adj[u].size() - 1});
 }
 void read_graph_ford(int &n, int &m, int &source, int &sink, vector<vector<ford_edge>> &adj)
 {
@@ -97,6 +97,6 @@ void run_ford_fulkerson()
   read_graph_ford(n, m, source, sink, adj);
   visited.resize(n);
   parent.resize(n);
-  cout << "Fluxo Maximo de" << source << " ate " << sink << " = ";
+  cout << "Fluxo Maximo de " << source << " ate " << sink << " = ";
   cout << ford_fulkerson_max_flow(n, source, sink, adj, visited, parent) << endl;
 }

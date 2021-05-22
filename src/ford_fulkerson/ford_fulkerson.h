@@ -20,4 +20,6 @@ void read_graph_ford(int &n, int &m, int &source, int &sink, vector<vector<ford_
 
 int ford_fulkerson_max_flow(int &n, int &source, int &sink, vector<vector<ford_edge>> &adj, vector<bool> &visited, vector<int> &parent);
 
+void run_ford_fulkerson();
+
 #endif

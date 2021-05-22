@@ -22,5 +22,9 @@ int main(int argc, char const *argv[])
   {
     run_dinic();
   }
+  else
+  {
+    cout << "Algoritmo não disponivel.\n";
+  }
   return 0;
 }

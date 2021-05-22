@@ -1,4 +1,6 @@
 #include "src/dijkstra/dijkstra.h"
+#include "src/dinic/dinic.h"
+#include "src/ford_fulkerson/ford_fulkerson.h"
 #include "src/kruskal/kruskal.h"
 
 int main(int argc, char const *argv[])
@@ -12,11 +14,13 @@ int main(int argc, char const *argv[])
   {
     run_kruskal();
   }
-  else if (algo == "ford-fulkerson")
+  else if (algo == "ford_fulkerson")
   {
+    run_ford_fulkerson();
   }
-  else if (algo == "hopcroft-karp")
+  else if (algo == "dinic")
   {
+    run_dinic();
   }
   return 0;
 }

@@ -33,10 +33,10 @@ bool kruskal_comparator(kruskal_edge a, kruskal_edge b)
 {
   return a.cost < b.cost;
 }
-vector<pair<int, int>> get_mst(vector<kruskal_edge> &edges, vector<int> &parent, int &sum)
+vector<kruskal_edge> get_mst(vector<kruskal_edge> &edges, vector<int> &parent, int &sum)
 {
   sort(edges.begin(), edges.end(), kruskal_comparator);
-  vector<pair<int, int>> answer;
+  vector<kruskal_edge> answer;
   for (auto const &i : edges)
   {
     int v = i.v, u = i.u, cost = i.cost;
@@ -44,7 +44,7 @@ vector<pair<int, int>> get_mst(vector<kruskal_edge> &edges, vector<int> &parent,
     {
       dsu_union(parent, u, v);
       sum += cost;
-      answer.push_back({u, v});
+      answer.push_back({u, v, cost});
     }
   }
   return answer;
@@ -71,11 +71,11 @@ void run_kruskal()
   vector<int> parent;
   read_graph_kruskal(n, m, edges);
   init_dsu(n, parent);
-  vector<pair<int, int>> answer = get_mst(edges, parent, sum);
+  vector<kruskal_edge> answer = get_mst(edges, parent, sum);
   cout << "Arestas da arvore geradora minima:" << endl;
   for (auto const &i : answer)
   {
-    cout << "(" << i.first << ", " << i.second << ")" << endl;
+    cout << "(" << i.u << ", " << i.v << ") - custo: " << i.cost << endl;
   }
   cout << "Custo total: " << sum << endl;
 }

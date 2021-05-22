@@ -16,7 +16,7 @@ void init_dsu(int n, vector<int> &parent);
 
 bool kruskal_comparator(kruskal_edge a, kruskal_edge b);
 
-vector<pair<int, int>> get_mst(vector<kruskal_edge> &edges, vector<int> &parent, int &sum);
+vector<kruskal_edge> get_mst(vector<kruskal_edge> &edges, vector<int> &parent, int &sum);
 
 void add_edge_kruskal(vector<kruskal_edge> &edges, int u, int v, int cost);
 

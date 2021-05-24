@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 #define INF 1e8
 
 int shortest_path(int &n, vector<vector<pair<int, int>>> &adj_list,

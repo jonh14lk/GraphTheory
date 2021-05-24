@@ -19,3 +19,9 @@ Para executar, você deve seguir o seguinte padrão:
 ### Executar os exemplos presentes no projeto
 
 ### Dijkstra
+
+```sh
+./algo dijkstra < inputs/dijkstra
+```
+
+[GitHub Logo](https://github.com/jonh14lk/GraphTheory/blob/main/Images/djikstra.PNG)

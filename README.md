@@ -13,7 +13,7 @@ Para compilar execute o comando *make compile_algo*
 Para executar, você deve seguir o seguinte padrão:
 
 ```sh
-./algo <nome_algoritmo> < <nome_entrada_algoritmo>
+./algo <nome do algoritmo> < <path do input>
 ```
 
 ### Executar os exemplos presentes no projeto
@@ -25,3 +25,25 @@ Para executar, você deve seguir o seguinte padrão:
 ```
 
 ![GitHub Logo](https://github.com/jonh14lk/GraphTheory/blob/main/Images/djikstra.PNG)
+
+### Kruskal
+
+```sh
+./algo kruskal < inputs/kruskal
+```
+![GitHub Logo](https://github.com/jonh14lk/GraphTheory/blob/main/Images/kruskal.PNG)
+
+### Ford Fulkerson
+
+```sh
+./algo ford_fulkerson < inputs/flow
+```
+![GitHub Logo](https://github.com/jonh14lk/GraphTheory/blob/main/Images/ford_fulkerson.PNG)
+
+### Dinic
+
+```sh
+./algo dinic < inputs/flow
+```
+![GitHub Logo](https://github.com/jonh14lk/GraphTheory/blob/main/Images/dinic.PNG)
+

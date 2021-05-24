@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 #define INF 1e8
 
 struct dinic_edge

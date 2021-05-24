@@ -17,3 +17,5 @@ Para executar, você deve seguir o seguinte padrão:
 ```
 
 ### Executar os exemplos presentes no projeto
+
+### Dijkstra

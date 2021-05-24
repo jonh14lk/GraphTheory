@@ -22,7 +22,7 @@
    
   **A implementação assume que o input contém vértices indexados a partir do 0 até N - 1.**
 
-### Executar os exemplos presentes no projeto
+### Executar os algoritmos implementados:
 
 ### Dijkstra
 

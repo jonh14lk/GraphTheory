@@ -13,7 +13,7 @@ Para compilar execute o comando *make compile_algo*
 Para executar, você deve seguir o seguinte padrão:
 
 ```sh
-./algo <nome do algoritmo> < <path do input>
+./algo <nome_do_algoritmo> < <path_do_input>
 ```
 
 ### Executar os exemplos presentes no projeto

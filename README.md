@@ -7,16 +7,19 @@
 ## Instruções:
 
 - Compilar
-Para compilar execute o comando *make compile_algo*
+ 
+ Para compilar execute o comando *make compile_algo*
 
 - Executar
-Para executar, você deve seguir o seguinte padrão:
+ 
+ Para executar, você deve seguir o seguinte padrão:
 
 ```sh
 ./algo <nome_do_algoritmo> < <path_do_input>
 ```
 
 - Observação:
+   
   **A implementação assume que o input contém vértices indexados a partir do 0 até N - 1.**
 
 - Executar os exemplos presentes no projeto

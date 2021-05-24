@@ -24,4 +24,4 @@ Para executar, você deve seguir o seguinte padrão:
 ./algo dijkstra < inputs/dijkstra
 ```
 
-[GitHub Logo](https://github.com/jonh14lk/GraphTheory/blob/main/Images/djikstra.PNG)
+![GitHub Logo](https://github.com/jonh14lk/GraphTheory/blob/main/Images/djikstra.PNG)

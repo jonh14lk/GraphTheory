@@ -6,20 +6,20 @@
 
 ## Instruções:
 
-### Compilar
+### * Compilar
 Para compilar execute o comando *make compile_algo*
 
-### Executar
+### * Executar
 Para executar, você deve seguir o seguinte padrão:
 
 ```sh
 ./algo <nome_do_algoritmo> < <path_do_input>
 ```
 
-### Observação:
+### * Observação:
   **A implementação assume que o input contém vértices indexados a partir do 0 até N - 1.**
 
-### Executar os exemplos presentes no projeto
+### * Executar os exemplos presentes no projeto
 
 ### Dijkstra
 
